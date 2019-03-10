@@ -9,16 +9,13 @@ import android.view.MotionEvent;
 import android.view.ViewConfiguration;
 
 public class BannerViewPager extends ViewPager {
-    private  int TouchSlop;
     private float downX, downY;
     public BannerViewPager(@NonNull Context context) {
         super(context);
-        TouchSlop= ViewConfiguration.get(context).getScaledTouchSlop();
     }
 
     public BannerViewPager(@NonNull Context context, @Nullable AttributeSet attrs) {
         super(context, attrs);
-        TouchSlop= ViewConfiguration.get(context).getScaledTouchSlop();
     }
     @Override
     public boolean onInterceptTouchEvent(MotionEvent e) {
